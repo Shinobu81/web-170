@@ -1,0 +1,164 @@
+@charset "utf-8"
+/*
+Theme Name: web170-su17 Demo
+Author: Ronald Hamasaki
+Author URI: http://scc-web-development.com/
+Description: Demo for web170-su17
+Version:1.0
+*/
+
+*{
+  /*border:1px dashed #000;*/
+  margin:0;
+  padding:0;
+}
+@font-face {
+  font-family: 'OratorStd';
+  src: url('fonts/OratorStd.eot');
+  src: url('fonts/OratorStd.woff2') format('woff2'),
+       url('fonts/OratorStd.woff') format('woff'),
+       url('fonts/OratorStd.ttf') format('truetype'),
+       url('fonts/OratorStd.svg#OratorStd') format('svg'),
+       url('fonts/OratorStd.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+body{
+  margin:auto;
+  width:100%;
+  font-family: 'OratorStd';
+  background-image:url("images/background.png");
+  background-size:contain;
+  background-repeat:repeat-y;
+}
+#wrapper{
+  margin:0 auto;
+  padding:0;
+  width:1080px;
+  background-color:#eee;
+  overflow:hidden;
+  clear:both;
+}
+header{
+  margin:0 auto;
+  width:1080px;
+  background-color:#000;
+  overflow:hidden;
+  opacity:0.98;
+}
+#logo{
+  margin:15px 0 15px 90px;
+  padding:0;
+  width:175px;
+  float:left;
+  display:block;
+}
+header h1{
+  padding-top:20px;
+  width:50%;
+  font-size:3.25em;
+  color:#eee;
+}
+#title{
+  padding-right:2em;
+  text-align:center;
+  float:left;
+  display:block;
+}
+h1{
+  font-size:2.65em;
+}
+h2{
+  font-size:2em;
+  color:#d00;
+}
+h3{
+  font-size:1.5em;
+  color:#d00;
+}
+nav{
+  margin:0 auto 1em;
+  padding:10px;
+  width:860px;
+  height:60px;
+  background-color:#eee;
+  clear:both;
+}
+#topNav li{
+  margin:0px;
+  font-size:1.5em;
+  width:145px;
+  list-style-type:none;
+  text-align:center;
+  float:left;
+  display:inline-block;
+}
+div #content{
+  margin-left:2em;
+  padding:1em;
+  width:620px;
+  float:left;
+}
+
+/* index page CSS only */
+
+main{
+  margin:1em;
+  width:1080px;
+  display:inline-block;
+}
+#banner{
+  margin:auto;
+  width:960px;
+}
+.colunm{
+  margin:5px;
+  padding:10px;
+  width:300px;
+  float:left;
+  display:inline-block;
+}
+
+/*aside CSS*/
+
+aside{
+  margin-right:2em;
+  padding:1em;
+  width:320px;
+  float:right;
+  border:3px solid #007;
+}
+
+/*contact CSS*/
+fieldset{
+  width:30em;
+}
+#location{
+  margin-right:10em;
+    border:1px solid #000;
+}
+/*footer CSS*/
+
+.top{
+  margin:0 auto;
+  clear:both;
+}
+footer{
+  margin:0 auto;
+  padding:0;
+  width:1080px;
+  background-color:#eee;
+}
+#copywrite{
+  padding-left:5px;
+  width:90%;
+}
+#footerLinks{
+  float:right;
+  width:10%;
+  line-height:60px;
+}
+.footerIcon{
+  width:25px;
+  height:25px;
+}
