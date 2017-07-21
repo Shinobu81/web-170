@@ -133,9 +133,9 @@ aside{
 fieldset{
   width:30em;
 }
-#location{
-  margin-right:10em;
-    border:1px solid #000;
+  #location{
+  margin-right:2em;
+  border:1px solid #000;
 }
 /*footer CSS*/
 
