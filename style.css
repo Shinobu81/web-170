@@ -35,16 +35,15 @@ body{
   margin:0 auto;
   padding:0;
   width:1080px;
-  background-color:#eee;
+  background-color:#fff;
   overflow:hidden;
-  clear:both;
 }
 header{
   margin:0 auto;
   width:1080px;
   background-color:#000;
   overflow:hidden;
-  opacity:0.98;
+  opacity:0.8;
 }
 #logo{
   margin:15px 0 15px 90px;
@@ -54,16 +53,21 @@ header{
   display:block;
 }
 header h1{
-  padding-top:20px;
   width:50%;
   font-size:3.25em;
   color:#eee;
 }
 #title{
-  padding-right:2em;
+  margin:0;
+  padding:0;
+  text-align: center;
+  display: inline-block;
+}
+#tagline{
+  width:540px;
+  color:white;
   text-align:center;
-  float:left;
-  display:block;
+  display: inline-block;
 }
 h1{
   font-size:2.65em;
@@ -93,40 +97,44 @@ nav{
   float:left;
   display:inline-block;
 }
-div #content{
-  margin-left:2em;
-  padding:1em;
-  width:620px;
-  float:left;
-}
-
-/* index page CSS only */
-
-main{
-  margin:1em;
-  width:1080px;
-  display:inline-block;
-}
 #banner{
   margin:auto;
   width:960px;
 }
+div#content{
+  margin:auto;
+  width:1032px;
+}
+
+/* home page CSS only */
+
+section.main{
+  width:1032px;
+}
 .colunm{
-  margin:5px;
-  padding:10px;
-  width:300px;
+  margin:12px;
+  padding:0;
+  width:320px;
   float:left;
   display:inline-block;
+}
+
+/* blog page CSS only*/
+
+section.info{
+  width:644px;
+  float:right;
 }
 
 /*aside CSS*/
 
 aside{
-  margin-right:2em;
-  padding:1em;
-  width:320px;
-  float:right;
+  margin-top:3em;
+  padding:.5em;
+  width:20em;
+  float:left;
   border:3px solid #007;
+  border-radius:1em;
 }
 
 /*contact CSS*/
@@ -148,6 +156,7 @@ footer{
   padding:0;
   width:1080px;
   background-color:#eee;
+  clear:both;
 }
 #copywrite{
   padding-left:5px;
