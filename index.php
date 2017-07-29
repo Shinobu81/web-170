@@ -1,5 +1,7 @@
 <!doctype html>
 <html>
+
+
 <head>
   <title>International Model &amp; Toys</title>
 
@@ -10,8 +12,6 @@
   <!-- CSS links -->
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url')?>"/>
 
-  <!-- JavaScript links-->
-
   <!-- Begin WP Head Function -->
   <?php wp_head();?>
   <!-- End WP Head Function -->
@@ -19,47 +19,34 @@
 </head>
 <body <?php body_class(); ?>>
 
-  <!---Start Wrapper--->
+  <!-- Start Wrapper -->
   <div id="wrapper">
 
-    <!---Start Header--->
+    <!-- Start Header -->
     <header>
       <img src="<?php bloginfo('template_directory')?>/images/logo.png" alt="logo" id="logo"/>
       <h1 id="title"><?php bloginfo('name'); ?></h1><br/><small id="tagline"><?php bloginfo('description'); ?></small>
     </header>
-    <!---End Header--->
+    <!-- End Header -->
 
-    <!--Start Navigation-->
+    <!-- Start Navigation -->
     <?php wp_nav_menu(array('theme_location' => 'main-menu', 'container' => 'div', 'container_id' => 'topNav'));?>
-    <!---End Navigation-->
+    <!-- End Navigation -->
 
-    <!--Start Navigation
-    <nav id="topNav">
-    <ul>
-    <a href=""><li>Main</li></a>
-    <a href="home.html"><li>Home</li></a>
-    <a href=""><li>Stock</li></a>
-    <a href=""><li>Gallery</li></a>
-    <a href=""><li>Contact</li></a>
-  </ul>
-</nav>
-End Navigation-->
-
-<!--Start Content-->
+<!-- Start Content -->
 <div id="content">
   <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-    <!--<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>-->
+    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     <?php the_content(''); ?>
   <?php endwhile; endif; ?>
-
 </div>
-<!---End Content--->
+<!-- End Content -->
 
-<!--Start Footer-->
+<!-- Start Footer -->
 <footer>
   <h4 id="copywrite">International Model &amp; Toys &copy; 2017 | <em>Designed by Ronald Hamasaki</em></h4>
 </footer>
-<!---End Footer--->
+<!--End Footer -->
 
 <!-- Begin WP Footer Function -->
 <?php wp_footer(); ?>
@@ -67,5 +54,6 @@ End Navigation-->
 
 </div>
 <!--End Wrapper-->
+
 </body>
 </html>
