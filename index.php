@@ -12,6 +12,15 @@
   <!-- CSS links -->
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url')?>"/>
 
+  <!-- Begin Toggle Menu -->
+  <script type="text/javascript" charset="utf-8">
+    $(window).load(function() { // enable function upon window load
+	     $("#toggle").click(function() { // when toggle is clicked...
+		       $("#topNav").toggle(); // ... open or close the navigation
+	     });
+    });
+  </script>
+  <!-- End Toggle Menu -->
   <!-- Begin WP Head Function -->
   <?php wp_head();?>
   <!-- End WP Head Function -->
@@ -36,11 +45,34 @@
 <!-- Start Content -->
 <div id="content">
   <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    <!--<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>-->
     <?php the_content(''); ?>
   <?php endwhile; endif; ?>
 </div>
 <!-- End Content -->
+
+<!-- Start Sidebar -->
+<div id="sidebar">
+<?php if (is_page()) : ?>
+<h2><?php echo get_the_title($post->post_parent); ?></h2>
+
+<ul class="sub-nav-items">
+<?php
+  if ($post->post_parent){ //If we're on has a parent
+    wp_list_pages(array('child_of' => $post->post_parent, 'title_li' => '')); // list sub pages of parent pages
+  } else {
+    wp_list_pages(array('child_of' => $post->ID, 'title_li' => ''));
+  }
+  ?>
+</ul>
+<?php endif; ?>
+<?php if(!(is_page())) : ?>
+  <h2>Blog</h2>
+<ul class="sub-nav-items">
+<?php wp_list_categories(array('title_li' => '')); ?>
+<?php endif; ?>
+</div>
+<!-- End Sidebar -->
 
 <!-- Start Footer -->
 <footer>

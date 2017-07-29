@@ -8,7 +8,6 @@ Version:1.0
 */
 
 *{
-  /*border:1px dashed #000;*/
   margin:0;
   padding:0;
 }
@@ -23,6 +22,7 @@ Version:1.0
   font-weight: normal;
   font-style: normal;
 }
+/*--------------- Body CSS ---------------*/
 body{
   margin:auto;
   width:100%;
@@ -37,13 +37,13 @@ body{
   width:1200px;
   background-color:#fff;
   overflow:hidden;
+  border-right:2px solid #999;
+  border-left:2px solid #999;
 }
+/*--------------- Header CSS ---------------*/
 header{
-  margin:0 auto;
-  width:1200px;
-  background-color:#000;
+  background-color:#002;
   overflow:hidden;
-  opacity:0.8;
 }
 #logo{
   margin:15px 0 15px 90px;
@@ -69,6 +69,8 @@ header h1{
   text-align:center;
   display: inline-block;
 }
+
+/*--------------- Headline CSS ---------------*/
 h1{
   font-size:2.65em;
 }
@@ -82,50 +84,68 @@ h3{
   color:#d00;
 }
 
-/* Navigation CSS */
-div #topNnav{
-  margin:0 auto 1em;
-  padding:10px;
-  width:960px;
-  line-height:60px;
-  background-color:#eee;
+/*--------------- Navigation CSS ---------------*/
+div #topNav.menu-main-menu-container{
+  margin:auto;
+  padding:1em;
+  background-color:#000;
   clear:both;
+  border-bottom:5px solid #00a;
 }
-#topNav li{
+ul #menu-main-menu.menu{
   margin:0px;
-  font-size:1.5em;
   width:145px;
+  height:30px;
+}
+#topNav ul li{
+  margin:auto;
+  width:208px;
+  font-size:2em;
   list-style-type:none;
   text-align:center;
-  float:left;
   display:inline-block;
 }
 #topNav ul li ul.sub-menu {
-display:none;
+  position: absolute;
+  z-index: 100;
+  display: none;
+  background-color: #000;
+  border-radius: 5px;
+  border:.5px solid #88f;
+  padding: 4px;
+  box-shadow:  5px 5px 10px #39275B;
 }
-#topNav ul li.current a:hover {
-color:#f00;
+#topNav ul li:hover ul.sub-menu {
+  display:block;
+}
+#topNav ul li ul.sub-menu li {
+  display:block;
+  font-size:.75em;
+  list-style-type: none;
+  padding: 4px 10px;
+}
+#topNav ul li ul.sub-menu li a {
+  color: #aaa;
+}
+#topNav ul li ul.sub-menu li a:hover {
+  color: #f00;
+}
+#topNav ul li a:visited{
+  text-decoration:none;
+  color:#aaa;
 }
 #topNav ul li.current a {
-color:#f00;
-text-shadow:4px #000;
+	color: #EBB700;
 }
 
+/*--------------- Home Page CSS ---------------*/
 
 #banner{
   margin:auto;
   width:960px;
 }
-div#content{
-  margin:20px;
-  margin-top:4em;
-  width:1160px;
-}
-
-/* home page CSS only */
-
-section.main{
-  width:1200px;
+section.home{
+  width:1200px
 }
 .colunm{
   margin-right:40px;
@@ -135,25 +155,25 @@ section.main{
   display:inline-block;
 }
 
-/* blog page CSS only*/
+/*--------------- Content CSS ---------------*/
 
-section.info{
-  width:644px;
+div #content {
+  margin:10px;
+  padding:10px;
+  width:760px;
+  float:left;
+  display:block;
+}
+
+/*--------------- Sidebar CSS ---------------*/
+#sidebar{
+  margin-right:20px;
+  padding:0;
+  width:360px;
   float:right;
 }
 
-/*aside CSS*/
-
-aside{
-  margin-top:3em;
-  padding:.5em;
-  width:20em;
-  float:left;
-  border:3px solid #007;
-  border-radius:1em;
-}
-
-/*contact CSS*/
+/*--------------- Contact CSS ---------------*/
 fieldset{
   width:30em;
 }
@@ -161,8 +181,8 @@ fieldset{
   margin-right:2em;
   border:1px solid #000;
 }
-/*footer CSS*/
 
+/*--------------- Footer CSS ---------------*/
 .top{
   margin:0 auto;
   clear:both;
@@ -182,8 +202,4 @@ footer{
   float:right;
   width:10%;
   line-height:60px;
-}
-.footerIcon{
-  width:25px;
-  height:25px;
 }
