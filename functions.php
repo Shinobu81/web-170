@@ -36,4 +36,12 @@ function get_my_title_tag(){
 // Register menu
 register_nav_menus(array('main-menu' => 'Main Menu'));
 //
+
+// Register Post Thumbnails
+add_theme_support('post-thumbnails');
+//
+
+// Register Page Excerpts
+add_post_type_support('page', 'excerpt');
+//
 ?>
