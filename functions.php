@@ -44,4 +44,8 @@ add_theme_support('post-thumbnails');
 // Register Page Excerpts
 add_post_type_support('page', 'excerpt');
 //
+
+// Register Sidebar
+register_sidebar(array('before_widget' => '<div id="%1$s" class="widget %1$s">', 'after_widget' => '</div>', 'before_title' => '<h2>', 'after_title' => '</h2>'));
+//
 ?>
