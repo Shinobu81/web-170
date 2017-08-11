@@ -42,60 +42,48 @@ body{
 }
 /*--------------- Header CSS ---------------*/
 header{
-  background-color:#002;
-  overflow:hidden;
+  background-color:#006;
+  height:155px;
 }
 #logo{
   margin:15px 0 15px 90px;
   padding:0;
-  width:175px;
+  height:125px;
   float:left;
   display:block;
 }
 header h1{
-  width:50%;
-  font-size:3.25em;
+  width:75%;
+  font-size:3em;
   color:#eee;
 }
 #title{
   margin:0;
+  margin-top:.5em;
   padding:0;
   text-align: center;
   display: inline-block;
 }
 #tagline{
-  width:540px;
+  margin:0;
+  width:75%;
   color:white;
   text-align:center;
   display: inline-block;
 }
 
-/*--------------- Headline CSS ---------------*/
-h1{
-  font-size:2.65em;
-}
-h2{
-  font-size:2em;
-  color:#d00;
-  margin-left:20px;
-}
-h3{
-  font-size:1.5em;
-  color:#d00;
-}
-
 /*--------------- Navigation CSS ---------------*/
 div #topNav.menu-main-menu-container{
   margin:auto;
-  padding:1em;
+  padding:1px;
   background-color:#000;
   clear:both;
-  border-bottom:5px solid #00a;
+  border-bottom:5px solid #009;
 }
 ul #menu-main-menu.menu{
   margin:0px;
   width:145px;
-  height:30px;
+  height:20px;
 }
 #topNav ul li{
   margin:auto;
@@ -135,7 +123,7 @@ ul #menu-main-menu.menu{
   color:#aaa;
 }
 #topNav ul li.current a {
-	color: #EBB700;
+  color: #EBB700;
 }
 
 /*--------------- Home Page CSS ---------------*/
@@ -144,11 +132,15 @@ ul #menu-main-menu.menu{
   margin:auto;
   width:960px;
 }
-section.home{
+main{
   width:1200px
 }
-.colunm{
-  margin-right:40px;
+.site_title{
+  margin:0;
+  margin-left:20px;
+}
+div .colunm{
+  margin:0px 20px;
   padding:0;
   width:360px;
   float:left;
@@ -172,6 +164,16 @@ div #content {
   width:360px;
   float:right;
 }
+
+/*--------------- Thumbnail CSS ---------------*/
+img.wp-post-image {}
+#content img.attachment-thumbnail {
+  float:left;
+  margin:4px 20px 0 0;
+}
+img.attachment-medium {}
+img.attachment-large {}
+img.attachment-full {}
 
 /*--------------- Contact CSS ---------------*/
 fieldset{
