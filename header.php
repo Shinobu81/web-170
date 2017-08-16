@@ -1,11 +1,11 @@
 <!doctype html>
 <html>
 <head>
-  <title>International Model &amp; Toys</title>
+  <title><?php get_my_title_tag() ?></title>
 
   <!-- Meta tags -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+  <meta name="description" content="<?php echo get_the_excerpt(); ?>">
   <!-- Begin Styles -->
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="all" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/flexslider.css" type="text/css">
