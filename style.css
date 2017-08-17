@@ -81,7 +81,7 @@ div #topNav.menu-main-menu-container{
   border-bottom:5px solid #009;
 }
 ul #menu-main-menu.menu{
-  margin:0px;
+  margin:auto;
   width:145px;
   height:20px;
 }
@@ -153,16 +153,39 @@ div #content {
   margin:10px;
   padding:10px;
   width:760px;
+  overflow:auto;
   float:left;
   display:block;
+}
+#content article.post-excerpt {
+  overflow: hidden;
+}
+#content article.post-excerpt p{
+  margin:0;
+}
+.read-more{
+  float:left;    
+}
+.read-more a:after {
+  content:'\2771';
 }
 
 /*--------------- Sidebar CSS ---------------*/
 #sidebar{
+  margin-top:3em;
   margin-right:20px;
   padding:0;
   width:360px;
   float:right;
+}
+li .page_item{
+  list-style-type:none;
+}
+blockquote{
+  margin-top:1em;
+  border-top:2px solid #000;
+  border-bottom:2px solid #000;
+  font-style:italic;
 }
 
 /*--------------- Thumbnail CSS ---------------*/
@@ -170,6 +193,9 @@ img.wp-post-image {}
 #content img.attachment-thumbnail {
   float:left;
   margin:4px 20px 0 0;
+  padding:8px;
+  border: 1px solid #000;
+  border-radius:4px;
 }
 img.attachment-medium {}
 img.attachment-large {}
@@ -190,14 +216,14 @@ fieldset{
   clear:both;
 }
 footer{
-  margin:0 auto;
-  padding:0;
+  padding:6px;
   width:1200px;
   background-color:#eee;
   clear:both;
 }
-#copywrite{
-  margin-left:20px;
+h4 #copywrite{
+  margin:0;
+  padding:0;
   width:90%;
 }
 #footerLinks{
